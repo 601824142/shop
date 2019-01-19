@@ -1,0 +1,27 @@
+#配置端口
+server:
+  port: 8082
+
+#配置solr查询中间件地址
+spring:
+  data:
+    solr:
+      host: http://47.112.22.169:8080/solr
+
+#配置dubbo注册中心管理界面
+dubbo:
+  #接口名
+  application:
+    name: search_service
+  #zookeeper注册中心地址
+  registry:
+    address: zookeeper://47.112.22.169:2181
+  #注册中心协议
+  protocol:
+    #-1代表自行寻找空端口
+    port: -1
+    #协议名称
+    name: dubbo
+  #若为消费者,则不检查提供者启动
+  consumer:
+    check: false

@@ -1,0 +1,21 @@
+#更改端口
+server:
+  port: 8084
+
+#配置Solr工程地址(通过该工程来进行搜索服务)
+spring:
+  data:
+    solr:
+      host: http://47.112.22.169:8080/solr
+  #配置模板无缓存
+  thymeleaf:
+    cache: false
+
+#配置dubbo
+dubbo:
+  #注册名
+  application:
+    name: shop_search
+  #注册地址
+  registry:
+      address: zookeeper://47.112.22.169:2181

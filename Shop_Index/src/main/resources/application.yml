@@ -1,0 +1,8 @@
+#端口配置
+server:
+  port: 8083
+
+#页面缓存配置
+spring:
+  thymeleaf:
+    cache: false
